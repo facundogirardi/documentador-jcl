@@ -94,7 +94,7 @@ if __name__ == "__main__":
 
     for jcl_file in files:
         path = os.path.join(folder, jcl_file)
-        with open(path) as f:
+        with open(path, encoding="utf-8") as f:
             jcl = f.read()
         parsed = parse_jcl(jcl)
         md_output = to_markdown(parsed)
@@ -102,7 +102,7 @@ if __name__ == "__main__":
         base_name = os.path.splitext(jcl_file)[0]
         output_file = os.path.join(folder, base_name + ".md")
 
-        with open(output_file, "w") as out:
+        with open(output_file, "w", encoding="utf-8") as out:
             out.write(md_output)
 
         print(f"✅ Documentación generada: {output_file}")

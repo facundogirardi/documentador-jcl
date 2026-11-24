@@ -1,41 +1,41 @@
-# Documentaci髇 JCL: BORRACRE
+# Documentaci贸n JCL: BORRACRE
 
 ## Paso 1: STEP1
 ### Programa
 - `IEFBR14`
-**Descripci髇:** Programa dummy que finaliza inmediatamente, usado para crear o borrar datasets.
+**Descripci贸n:** Programa dummy que finaliza inmediatamente, usado para crear o borrar datasets.
 ### EXEC
 - `//STEP1    EXEC PGM=IEFBR14`
 
 ### Datasets
 
-| DDNAME | Definici髇 |
+| DDNAME | Definici贸n |
 |--------|------------|
 | DD1 | DD DSN=FACUNDO.TEST.FILE, |
 
 ## Paso 2: STEP2
 ### Programa
 - `IEFBR14`
-**Descripci髇:** Programa dummy que finaliza inmediatamente, usado para crear o borrar datasets.
+**Descripci贸n:** Programa dummy que finaliza inmediatamente, usado para crear o borrar datasets.
 ### EXEC
 - `//STEP2    EXEC PGM=IEFBR14`
 
 ### Datasets
 
-| DDNAME | Definici髇 |
+| DDNAME | Definici贸n |
 |--------|------------|
 | DD1 | DD DSN=FACUNDO.TEST.FILE, |
 
 ## Paso 3: STEP3
 ### Programa
 - `IEBGENER`
-**Descripci髇:** Copia datasets secuenciales, 鷗il para pruebas o generaci髇 de datos.
+**Descripci贸n:** Copia datasets secuenciales, 煤til para pruebas o generaci贸n de datos.
 ### EXEC
 - `//STEP3    EXEC PGM=IEBGENER`
 
 ### Datasets
 
-| DDNAME | Definici髇 |
+| DDNAME | Definici贸n |
 |--------|------------|
 | SYSUT1 | DD * |
 | SYSUT2 | DD DSN=FACUNDO.TEST.FILE, |
